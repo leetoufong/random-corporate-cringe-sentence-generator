@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 import './App.css';
-import Conversation from './Conversation';
 
 export default function App() {
 	const [loading, setLoading] = useState(false);
@@ -11,7 +10,7 @@ export default function App() {
 	const [nouns, setNouns] = useState([]);
 
 	const [sentences, setSentences] = useState([]);
-	const [currentNumber, setCurrentNumber] = useState([]);
+	const [currentNumber, setCurrentNumber] = useState(1);
 
 	const sentence = useRef(null);
 	const input = useRef(null);
@@ -38,17 +37,19 @@ export default function App() {
 		fetchData();
 	}, []);
 
-	function handleCreateSentences(num) {
+	function handleCreateSentences(event) {
 		const newSentences = [];
+		event.preventDefault();
 		
-		for (let i = 0; i < num; i++) {
-			let newSentence = '';
+		let newSentence = '';
+
+		for (let i = 0; i < currentNumber; i++) {
 			const adjective = adjectives[Math.floor(Math.random() * adjectives.length)];
 			const noun = nouns[Math.floor(Math.random() * nouns.length)];
 			const adverb = adverbs[Math.floor(Math.random() * adverbs.length)];
 			const verb = verbs[Math.floor(Math.random() * verbs.length)];
 
-			newSentence = `${adverb.charAt(0).toUpperCase() + adverb.slice(1)} ${verb} ${adjective} ${noun}`;
+			newSentence = `${adverb.charAt(0).toUpperCase() + adverb.slice(1)} ${verb} ${adjective} ${noun}.`;
 			newSentences.push(newSentence);
 		}
 
@@ -56,17 +57,23 @@ export default function App() {
 	}
 
 	return (
-		<div className="App">
+		<div className="app">
 
-			<h1>Ever find yourself in an awkward situation where you need to reply with a corporate sentence? Cringe no further friends!</h1>
-			<div>
-				<div><label>Number of sentences:</label><input value={20} ref={input} onChange={() => setCurrentNumber(input.current.value)} /></div>
-				<div><button onClick ={() => handleCreateSentences(input.current.value)}>Generate</button></div>
-			</div>
+			<header className="app-header">
+				<h1 className="app-title">Corporate Cringe Sentence Generator</h1>
+			</header>
+			
+			<main className="app-main">
+				<form onSubmit ={(event) => handleCreateSentences(event)}>
+					<label>Number of sentences:</label>
+					<input value={currentNumber} ref={input} onChange={() => setCurrentNumber(input.current.value)} />
+					<button>Generate!</button>
+				</form>
 
-			<ul ref={sentence}>
-				{sentences.map((sentence, index) => <li key={index}>{sentence}</li>)}
-			</ul>
+				<ul ref={sentence} className="sentences">
+					{sentences.map((sentence, index) => <li key={index} className="sentence">{sentence}</li>)}
+				</ul>
+			</main>
 
 		</div>
 	);
