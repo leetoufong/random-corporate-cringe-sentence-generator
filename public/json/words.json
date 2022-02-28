@@ -43,7 +43,7 @@
 		"continually", "conveniently", "credibly", "distinctively", "dramatically", "dynamically", "efficiently",
 		"energistically", "enthusiastically", "globally", "holisticly", "interactively", "intrinsically", "monotonectally",
 		"objectively", "phosfluorescently", "proactively", "professionally", "progressively", "quickly", "rapidiously",
-		"seamlessly", "synergistically", "uniquely", "fungibly", "robustly"
+		"seamlessly", "synergistically", "uniquely", "fungibly", "robustly", "thoroughly", "strongly", "meticulously", "intellectually", "effectively", "confidently"
 	],
 	"verbs": [
 		"actualize", "administrate", "aggregate", "architect", "benchmark", "brand", "build", "communicate", "conceptualize",
@@ -51,11 +51,11 @@
 		"drive", "embrace", "e-enable", "empower", "enable", "engage", "engineer", "enhance", "envisioneer", "evisculate",
 		"evolve", "expedite", "exploit", "extend", "fabricate", "facilitate", "fashion", "formulate", "foster", "generate",
 		"grow", "harness", "impact", "implement", "incentivize", "incubate", "initiate", "innovate", "integrate", "iterate",
-		"leverage existing", "leverage other\"s", "maintain", "matrix", "maximize", "mesh", "monetize", "morph", "myocardinate",
+		"leverage existing", "leverage other's", "maintain", "matrix", "maximize", "mesh", "monetize", "morph", "myocardinate",
 		"negotiate", "network", "optimize", "orchestrate", "parallel task", "plagiarize", "pontificate", "predominate",
 		"procrastinate", "productivate", "productize", "promote", "provide access to", "pursue", "recaptiualize",
 		"reconceptualize", "redefine", "re-engineer", "reintermediate", "reinvent", "repurpose", "restore", "revolutionize",
 		"scale", "seize", "simplify", "strategize", "streamline", "supply", "syndicate", "synergize", "synthesize", "target",
-		"transform", "transition", "underwhelm", "unleash", "utilize", "visualize", "whiteboard", "cloudify", "right-shore", "off-line", "ping"
+		"transform", "transition", "underwhelm", "unleash", "utilize", "visualize", "whiteboard", "cloudify", "right-shore", "off-line",  "ping", "per"
 	]
 }
