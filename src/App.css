@@ -1,10 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;900&display=swap');
 
 body {
 	color: #333;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1rem;
+	font-weight: 300;
 	line-height: 1.4;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Playfair Display', serif;
+}
+
+button {
+	cursor: pointer;
+	font-family: 'Roboto', sans-serif;
+}
+
+input {
+	font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -17,23 +31,102 @@ ul {
 }
 
 .app {
-	background-color: #478ae7;
+	background-color: #517adb;
 	padding: 4rem;
+}
+
+.app-header {
+	height: 260px;
+}
+
+.billboard {
+	background-attachment: fixed;
+	/* background-position: 50% 50%; */
+    background-repeat: no-repeat;
+    background-size: cover;
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 0;
 }
 
 .app-title {
 	color: #fff;
+	font-size: 6rem;
+	font-weight: 400;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	text-align: center;
+	text-shadow: 1px 1px 1px rgb(0 0 0);
+	z-index: 1;
+}
+.app-title span {
+	font-weight: 700;
+}
+
+.app-subtitle {
+	display: block;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	font-size: 2.5rem;
 }
 
 .app-main {
 	background-color: #fff;
-	border-radius: 1rem;
+	border: 1px solid;
+	border-color: #eee;
+	border-radius: 3px;
 	padding: 4rem;
+	position: relative;
+	z-index: 1;
+}
+
+.form {
+	align-items: center;
+	display: flex;
+}
+
+.form + .sentences {
+	margin-top: 3rem;
+}
+
+.input {
+	border: 1px solid;
+	border-color: #d3d3d3;
+	border-radius: 4px;
+	font-weight: 700;
+	height: 30px;
+	padding: 4px;
+	width: 60px;
+}
+
+.label + .input,
+.input + .btn {
+	margin-left: 6px;
+}
+
+.btn {
+	background-color: #548acd;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	font-weight: 700;
+	height: 30px;
+	padding: 4px;
 }
 
 .sentence {
 	font-size: 200%;
 }
-..sentence + .sentence {
-	margin-top: 2rem;
+.sentence + .sentence {
+	margin-top: .5rem;
+}
+
+.btn-copy {
+	background-color: transparent;
+	border: none;
+	padding: 0;
 }
