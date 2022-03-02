@@ -31,7 +31,7 @@ ul {
 }
 
 .app {
-	background-color: #517adb;
+	background-color: #434aaa;
 	padding: 4rem;
 }
 
@@ -41,7 +41,7 @@ ul {
 
 .billboard {
 	background-attachment: fixed;
-	/* background-position: 50% 50%; */
+	background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
 	height: 100%;
