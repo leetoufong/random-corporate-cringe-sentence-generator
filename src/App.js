@@ -7,7 +7,6 @@ export default function App() {
 	const [verbs, setVerbs] = useState([]);
 	const [adjectives, setAdjectives] = useState([]);
 	const [nouns, setNouns] = useState([]);
-
 	const [sentences, setSentences] = useState([]);
 	const [currentNumber, setCurrentNumber] = useState(1);
 
